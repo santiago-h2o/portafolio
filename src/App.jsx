@@ -1,8 +1,17 @@
-import React from 'react'
+import { LoadingScreen } from './components/loading/LoadingScreen'
+import './App.css'
+import './index.css'
+import { useState } from 'react';
 
 const App = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
-    <div>App</div>
+    <>
+      {
+        !isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)}/>
+      }
+    </>
   )
 }
 
