@@ -21,7 +21,7 @@ export const techIcons = {
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Javascript" className="inline w-4 h-4 mr-1 align-text-bottom" />
   ),
   TailwindCSS: (
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="TailwindCSS" className="inline w-4 h-4 mr-1 align-text-bottom" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="TailwindCSS" className="inline w-4 h-4 mr-1 align-text-bottom" />
   ),
   Bootstrap: (
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" className="inline w-4 h-4 mr-1 align-text-bottom" />
@@ -45,7 +45,7 @@ export const techIcons = {
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="inline w-4 h-4 mr-1 align-text-bottom" />
   ),
   Nest: (
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg" alt="NestJS" className="inline w-4 h-4 mr-1 align-text-bottom" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg" alt="NestJS" className="inline w-4 h-4 mr-1 align-text-bottom" />
   ),
   Go: (
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Go" className="inline w-4 h-4 mr-1 align-text-bottom" />
