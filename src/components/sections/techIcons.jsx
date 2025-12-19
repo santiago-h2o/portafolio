@@ -68,4 +68,35 @@ export const techIcons = {
   Firebase: (
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" className="inline w-4 h-4 mr-1 align-text-bottom" />
   ),
+  Threejs: (
+    <img src="https://threejs.org/files/favicon.ico" alt="Three.js" className="inline w-4 h-4 mr-1 align-text-bottom" />
+  ),
+  WordPress: (
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
+      alt="WordPress"
+      className="inline w-4 h-4 mr-1 align-text-bottom"
+    />
+  ),
+  Webflow: (
+    <img
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webflow/webflow-original.svg"
+      alt="Webflow"
+      className="inline w-4 h-4 mr-1 align-text-bottom"
+    />
+  ),
+  Elementor: (
+    <img
+      src="https://cdn.simpleicons.org/elementor/92003B"
+      alt="Elementor"
+      className="inline w-4 h-4 mr-1 align-text-bottom"
+    />
+  ),
+  Clerk: (
+    <img
+      src="https://cdn.simpleicons.org/clerk/6C47FF"
+      alt="Clerk"
+      className="inline w-4 h-4 mr-1 align-text-bottom"
+    />
+  ),
 };
