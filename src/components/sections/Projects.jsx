@@ -142,10 +142,14 @@ correo1
 function ProjectModal({ project, onClose, currentImg, setCurrentImg }) {
   if (!project) return null;
   return (
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-      <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-lg w-full relative shadow-lg">
+    <div className="fixed inset-0 z-50 flex items-center justify-center" style={{ background: 'rgba(0,0,0,0.6)' }}>
+      <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-lg w-full relative shadow-lg max-h-[90vh] flex flex-col items-center justify-center">
         <button onClick={onClose} className="absolute top-2 right-2 text-gray-500 hover:text-blue-500 text-2xl">&times;</button>
-        <h3 className="text-2xl font-bold mb-2 text-center text-gray-800 dark:text-gray-200">{project.title}</h3>
+        <h3 className="text-2xl font-bold mb-2 text-center text-gray-800 dark:text-gray-200">{project.title}
+          {project.author && (
+            <span className="ml-2 px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full align-middle">Propio</span>
+          )}
+        </h3>
         <p className="mb-4 text-gray-700 dark:text-gray-300 text-center">{project.longDescription}</p>
         <div className="flex flex-col items-center">
           <div className="relative w-full flex items-center justify-center mb-2">
@@ -187,7 +191,12 @@ export const Projects = () => {
                 onClick={() => openModal(project)}
               >
                 <img src={project.image} alt={project.title} className="w-full h-40 object-cover rounded-lg mb-4" />
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <div className="flex items-center mb-2">
+                  <h3 className="text-xl font-bold mr-2">{project.title}</h3>
+                  {project.author && (
+                    <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full align-middle">Propio</span>
+                  )}
+                </div>
                 <p className="text-gray-400 mb-2">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, key) => (
