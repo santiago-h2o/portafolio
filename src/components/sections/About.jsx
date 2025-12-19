@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../scroll/RevealOnScroll";
+import { techIcons } from "./techIcons";
 
 export const About = () => {
 
@@ -20,15 +21,19 @@ export const About = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="rounded-xl p-6 hover:translate-y-1 transition-all">
                             <h3 className="text-xl font-bold mb-4">Frontend</h3>
-                            <div className="flex flex-wrap gap-2">{frontendSkills.map((skill, key) => (
-                                <span key={key} className="bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition">{skill}</span>
-                            ))}</div>
+                                                        <div className="flex flex-wrap gap-2">{frontendSkills.map((skill, key) => (
+                                                                <span key={key} className="bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full text-sm flex items-center gap-1 hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition">
+                                                                    {techIcons[skill] || null}{skill}
+                                                                </span>
+                                                        ))}</div>
                         </div>
                         <div className="rounded-xl p-6 hover:translate-y-1 transition-all">
                             <h3 className="text-xl font-bold mb-4">Backend</h3>
-                            <div className="flex flex-wrap gap-2">{backendSkills.map((skill, key) => (
-                                <span key={key} className="bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition">{skill}</span>
-                            ))}</div>
+                                                        <div className="flex flex-wrap gap-2">{backendSkills.map((skill, key) => (
+                                                                <span key={key} className="bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full text-sm flex items-center gap-1 hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition">
+                                                                    {techIcons[skill] || null}{skill}
+                                                                </span>
+                                                        ))}</div>
                         </div>
                     </div>
                 </div>
