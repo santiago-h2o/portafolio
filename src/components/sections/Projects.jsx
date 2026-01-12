@@ -176,42 +176,82 @@ export const Projects = () => {
     setModalProject(project);
     setCurrentImg(0);
   };
+
   const closeModal = () => setModalProject(null);
 
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center py-20">
+    <section
+      id="projects"
+      className="min-h-screen flex items-center justify-center py-16 md:py-20"
+    >
       <RevealOnScroll>
-        <div className="max-w-8xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">Mi Participacion En Proyectos y Proyectos Propios</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6">
+          {/* TÍTULO */}
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+            Mi Participación En Proyectos y Proyectos Propios
+          </h2>
+
+          {/* GRID */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {projects.map((project, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-xl border border-white/10 hover:translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all cursor-pointer bg-white/5 dark:bg-gray-800"
                 onClick={() => openModal(project)}
+                className="p-4 md:p-6 rounded-xl border border-white/10 bg-white/5 dark:bg-gray-800
+                hover:translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)]
+                transition-all cursor-pointer"
               >
-                <img src={project.image} alt={project.title} className="w-full h-40 object-cover rounded-lg mb-4" />
-                <div className="flex items-center mb-2">
-                  <h3 className="text-xl font-bold mr-2">{project.title}</h3>
+                {/* IMAGEN */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-32 sm:h-36 md:h-40 object-cover rounded-lg mb-3 md:mb-4"
+                />
+
+                {/* TÍTULO */}
+                <div className="flex items-center mb-2 flex-wrap gap-2">
+                  <h3 className="text-lg md:text-xl font-bold">
+                    {project.title}
+                  </h3>
+
                   {project.author && (
-                    <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full align-middle">Propio</span>
+                    <span className="px-2 py-0.5 bg-blue-100 text-blue-700 text-xs rounded-full">
+                      Propio
+                    </span>
                   )}
                 </div>
-                <p className="text-gray-400 mb-2">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+
+                {/* DESCRIPCIÓN */}
+                <p className="text-gray-400 text-sm md:text-base mb-3">
+                  {project.description}
+                </p>
+
+                {/* TECNOLOGÍAS */}
+                <div className="flex flex-wrap gap-1.5 md:gap-2 mb-3 md:mb-4">
                   {project.tech.map((tech, key) => (
-                    <span key={key} className="bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full text-sm flex items-center gap-1 hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,2246,0.2)] transition">
-                      {techIcons[tech] || null}{tech}
+                    <span
+                      key={key}
+                      className="bg-blue-500/10 text-blue-500 px-2 py-0.5 md:px-3 md:py-1
+                      rounded-full text-xs md:text-sm flex items-center gap-1
+                      hover:bg-blue-500/20 transition"
+                    >
+                      {techIcons[tech] || null}
+                      {tech}
                     </span>
                   ))}
                 </div>
+
+                {/* CTA */}
                 <div className="flex justify-between items-center">
-                  <span className="text-blue-400 hover:text-blue-300 transition-colors my-4">Ver Proyecto ➜</span>
+                  <span className="text-blue-400 text-sm md:text-base hover:text-blue-300 transition-colors">
+                    Ver Proyecto ➜
+                  </span>
                 </div>
               </div>
             ))}
           </div>
         </div>
+
         <ProjectModal
           project={modalProject}
           onClose={closeModal}
@@ -221,5 +261,6 @@ export const Projects = () => {
       </RevealOnScroll>
     </section>
   );
-}
+};
+
 
